@@ -1,0 +1,14 @@
+services:
+  sticker-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.bot
+    container_name: sticker-convert-bot
+    env_file: .env
+    environment:
+      WORK_DIR: /app/bot_data
+    volumes:
+      - ./bot_data:/app/bot_data
+    dns:
+      - 1.1.1.1   # Telegram download/upload can fail in Docker without this
+    restart: unless-stopped

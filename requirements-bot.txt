@@ -1,0 +1,3 @@
+-r requirements.txt
+python-telegram-bot>=21.6,<23
+python-dotenv>=1.0
