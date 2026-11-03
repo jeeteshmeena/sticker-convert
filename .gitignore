@@ -86,3 +86,6 @@ appimagetool
 runtime-*
 *.AppImage
 **/SWB/**
+# Telegram bot
+.env
+bot_data/
